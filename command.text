@@ -1,0 +1,31 @@
+kubectl apply -f .\sample-pod.yml
+kubectl get all
+kubectl delete pod client-pod
+
+docker pull imsuriyapi/todo-app:v4
+kubectl get all
+kubectl apply -f .\sample-pod.yml
+kubectl get all
+kubectl logs client-pod
+kubectl delete all --all//ลบแบบสะอาดหมดจด
+
+kubectl apply -f .\client-deployment.yml
+kubectl get all
+kubectl delete pods client-deployment-6d87bd56c5-z7p9p
+kubectl get all
+kubectl delete deployments client-deployment
+kubectl get all
+kubectl apply -f .   //รันทั้งหมดพร้อมกัน
+
+kubectl logs mongo-deployment-7c76b79684-j6lj2 
+http://localhost:30001/
+http://localhost:30002/api/health
+http://localhost:30002/api/todo
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.2/deploy/static/provider/cloud/deploy.yaml */ใส่terminal*/
+
+
+kubectl apply -f .\mongo-pvc.yml   
+kubectl delete pods mongo-deployment-5fbbbc6887-4c4tr 
+http://todo.com/
+http://todo.com/api/todo
